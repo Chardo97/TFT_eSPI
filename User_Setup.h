@@ -42,7 +42,7 @@
 //#define RPI_DISPLAY_TYPE // 20MHz maximum SPI
 
 // Only define one driver, the other ones must be commented out
-#define ILI9341_DRIVER       // Generic driver for common displays
+//#define ILI9341_DRIVER       // Generic driver for common displays
 //#define ILI9341_2_DRIVER     // Alternative ILI9341 driver, see https://github.com/Bodmer/TFT_eSPI/issues/1172
 //#define ST7735_DRIVER      // Define additional parameters below for this display
 //#define ILI9163_DRIVER     // Define additional parameters below for this display
@@ -60,7 +60,7 @@
 //#define SSD1351_DRIVER
 //#define SSD1963_480_DRIVER
 //#define SSD1963_800_DRIVER
-//#define SSD1963_800ALT_DRIVER
+#define SSD1963_800ALT_DRIVER
 //#define ILI9225_DRIVER
 //#define GC9A01_DRIVER
 
@@ -73,7 +73,7 @@
 // For ST7735, ST7789 and ILI9341 ONLY, define the colour order IF the blue and red are swapped on your display
 // Try ONE option at a time to find the correct colour order for your display
 
-//  #define TFT_RGB_ORDER TFT_RGB  // Colour order Red-Green-Blue
+  #define TFT_RGB_ORDER TFT_RGB  // Colour order Red-Green-Blue
 //  #define TFT_RGB_ORDER TFT_BGR  // Colour order Blue-Green-Red
 
 // For M5Stack ESP32 module with integrated ILI9341 display ONLY, remove // in line below
@@ -167,13 +167,13 @@
 // ###### EDIT THE PIN NUMBERS IN THE LINES FOLLOWING TO SUIT YOUR ESP8266 SETUP ######
 
 // For NodeMCU - use pin numbers in the form PIN_Dx where Dx is the NodeMCU pin designation
-#define TFT_MISO  PIN_D6  // Automatically assigned with ESP8266 if not defined
-#define TFT_MOSI  PIN_D7  // Automatically assigned with ESP8266 if not defined
-#define TFT_SCLK  PIN_D5  // Automatically assigned with ESP8266 if not defined
+//#define TFT_MISO  PIN_D6  // Automatically assigned with ESP8266 if not defined
+//#define TFT_MOSI  PIN_D7  // Automatically assigned with ESP8266 if not defined
+//#define TFT_SCLK  PIN_D5  // Automatically assigned with ESP8266 if not defined
 
-#define TFT_CS    PIN_D8  // Chip select control pin D8
-#define TFT_DC    PIN_D3  // Data Command control pin
-#define TFT_RST   PIN_D4  // Reset pin (could connect to NodeMCU RST, see next line)
+//#define TFT_CS    PIN_D8  // Chip select control pin D8
+//#define TFT_DC    PIN_D3  // Data Command control pin
+//#define TFT_RST   PIN_D4  // Reset pin (could connect to NodeMCU RST, see next line)
 //#define TFT_RST  -1     // Set TFT_RST to -1 if the display RESET is connected to NodeMCU RST or 3.3V
 
 
@@ -251,24 +251,24 @@
 // Example below is for ESP32 Parallel interface with UNO displays
 
 // Tell the library to use 8-bit parallel mode (otherwise SPI is assumed)
-//#define TFT_PARALLEL_8_BIT
+#define TFT_PARALLEL_8_BIT
 
 // The ESP32 and TFT the pins used for testing are:
-//#define TFT_CS   33  // Chip select control pin (library pulls permanently low
-//#define TFT_DC   15  // Data Command control pin - must use a pin in the range 0-31
-//#define TFT_RST  32  // Reset pin, toggles on startup
+#define TFT_CS   33  // Chip select control pin (library pulls permanently low
+#define TFT_DC   15  // Data Command control pin - must use a pin in the range 0-31
+#define TFT_RST  32  // Reset pin, toggles on startup
 
-//#define TFT_WR    4  // Write strobe control pin - must use a pin in the range 0-31
-//#define TFT_RD    2  // Read strobe control pin
+#define TFT_WR    4  // Write strobe control pin - must use a pin in the range 0-31
+#define TFT_RD    2  // Read strobe control pin
 
-//#define TFT_D0   12  // Must use pins in the range 0-31 for the data bus
-//#define TFT_D1   13  // so a single register write sets/clears all bits.
-//#define TFT_D2   26  // Pins can be randomly assigned, this does not affect
-//#define TFT_D3   25  // TFT screen update performance.
-//#define TFT_D4   17
-//#define TFT_D5   16
-//#define TFT_D6   27
-//#define TFT_D7   14
+#define TFT_D0   12  // Must use pins in the range 0-31 for the data bus
+#define TFT_D1   13  // so a single register write sets/clears all bits.
+#define TFT_D2   26  // Pins can be randomly assigned, this does not affect
+#define TFT_D3   25  // TFT screen update performance.
+#define TFT_D4   17
+#define TFT_D5   16
+#define TFT_D6   27
+#define TFT_D7   14
 
 // ######       EDIT THE PINs BELOW TO SUIT YOUR STM32 SPI TFT SETUP        ######
 
